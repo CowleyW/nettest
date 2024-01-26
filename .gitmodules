@@ -1,0 +1,6 @@
+[submodule "lib/fmt"]
+	path = lib/fmt
+	url = git@github.com:fmtlib/fmt.git
+[submodule "lib/asio"]
+	path = lib/asio
+	url = git@github.com:chriskohlhoff/asio.git
