@@ -67,3 +67,18 @@ target_link_libraries(client PRIVATE
 )
 
 target_compile_definitions(client PRIVATE _WIN32_WINNT=0x0A00)
+
+
+##############################
+##  UDP
+##############################
+
+add_executable(udp_client src/udp/client/client.cpp)
+target_include_directories(udp_client PRIVATE lib/fmt/include lib/asio/asio/include)
+target_link_libraries(udp_client PRIVATE fmt ws2_32 wsock32)
+target_compile_definitions(udp_client PRIVATE _WIN32_WINNT=0x0A00)
+
+add_executable(udp_server src/udp/server/server.cpp)
+target_include_directories(udp_server PRIVATE lib/fmt/include lib/asio/asio/include)
+target_link_libraries(udp_server PRIVATE fmt ws2_32 wsock32)
+target_compile_definitions(udp_server PRIVATE _WIN32_WINNT=0x0A00)

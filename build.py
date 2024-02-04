@@ -32,6 +32,8 @@ if __name__ == "__main__":
     if args.configure:
         configure()
     else:
-        build_main("client", args.run)
-        build_main("server", args.run)
+        # build_main("client", args.run)
+        # build_main("server", args.run)
+        build_main("udp_client", args.run)
+        build_main("udp_server", args.run)
 
